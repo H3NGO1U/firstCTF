@@ -110,6 +110,11 @@ But if we enter a number that is under 100, we will see another query parameter 
 <br>
 We can change it to the secret code, and press `Enter`.
 Flag should appear:)
+<br>
+
+### Flag 4 - directories
+When we notice that we are in a directory, we should always check it.
+if we try to access 
 
 
 
