@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first CTF</title>
+</head>
+<body>
+    <div id="form">
+    <h1>Enter the entrance code:</h1>
+    <br>
+    <input id="secret_code"/>
+    <br><br>
+    <button onclick="check()">Submit</button>
+    </div>
+    <style>
+        body{
+            background-image: url("assets/images/sec.jpg");
+            font-family: monospace, Arial, Helvetica, sans-serif;
+            font-size:30px;
+        }
+        #form{
+            text-align: center;
+            padding: 70px 0;
+            color:white;
+        }
+        button{
+            width:25%;
+            height:50px;
+        }
+        #secret_code{
+            width:25%;
+            height:40px;
+            font-size:15px;
+        }
+        
+    </style>
+    <script>
+        function check(){
+            your_pass = document.getElementById("secret_code").value;
+            if(your_pass=="firstCTF{0_Gr3At_j0b3__aDfeT23V^4}"){
+                alert("Great job!");
+                window.location.replace("home.html");
+            }
+            else
+                alert("No.......");
+        }
+    </script>
+</body>
+</html>

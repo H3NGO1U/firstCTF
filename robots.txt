@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+/assets/admin.php
+/portal.php
+firstCTF{2_u_F0unD_tH3_R0b0T5!!}

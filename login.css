@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+}
+#login_form{
+    width:50%;
+    position:relative;
+    margin-left:25%;
+    background-color: #c0e3e6;
+    border: 3px double;
+    font-family: Tahoma, Arial;
+}
+
+#login_button{
+    position:absolute;
+    bottom:10px;
+    right:30px;
+    font-size:20px; 
+    width:100px;
+    border-radius: 10px;
+}
+
+#login_button:hover{
+    background-color: #abb0b0;
+}
+input{
+    width:90%;
+    border: 2px solid #ccc;
+    padding:10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+label{
+    padding:10px;
+    font-size: 20px;
+    color:#888;
+}
+
+.error{
+    color: #cc6d64;
+    background-color: #facdc8;
+    width:90%;
+    margin-left:10px;
+    padding:10px;
+    border:2px ridge #f7cbc6;
+}

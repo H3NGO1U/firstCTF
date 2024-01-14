@@ -1,0 +1,40 @@
+#content_welcome{
+    text-align: center;
+    color:#1a7f8b;
+    font:40px Garamond; 
+}
+#ann_card{
+    position:relative;
+    margin-left:25%;
+    text-align: center;
+    border: 3px dashed black;
+    background-color: #b8baba;
+    width:50%;
+}
+
+#close_button{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+#close_button:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+#username{
+    font:20px cursive;
+}
+
+#some_txt_under{
+    text-align: center;
+}
+.container_row{
+  display: grid;
+}
+
+#some_txt_under, #ann_card{
+  grid-column: 1;
+  grid-row: 1;
+}
+/*firstCTF{2_l0L_th0s3_css!!}*/
