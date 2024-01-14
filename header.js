@@ -1,12 +1,13 @@
 var header = document.getElementById("header-comp");
 header.innerHTML=`
 <div id="header">
-<a><img src="hacking.webp" alt="Logo"></a>
+<a href="https://github.com/H3NGO1U/firstCTF" target="_blank"><img src="assets/images/github-mark.png"></a>
 <div id="links">
     <a class="link" href="http://firstctf-flag-collector.rf.gd" target="_blank">Submit Flag</a>
     <a class="link" href="home.html">Home</a>
     <a class="link" href="about.html">About</a>
     <a class="link" href="login_page.php">Login</a>
+    
 </div>
 </div>
 
