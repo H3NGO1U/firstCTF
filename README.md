@@ -114,7 +114,40 @@ Flag should appear:)
 
 ### Flag 4 - directories
 When we notice that we are in a directory, we should always check it.
-if we try to access 
+<br>
+if we try to access `http://firstctf.atwebpages.com/assets/`, we will find another flag.
+<br>
+
+### Flag 5 - using devtools
+Rememver the `portal.php` endpoint we discovered in the robots.txt file?
+<br>
+If you try to access it, you will be redirected to `redirect.html`.
+
+<img width="428" alt="redirect" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/5b5a85e3-3288-4dca-8ee3-1d57c35e9274">
+
+We should check the redirection using the `network` tab in devtools, which is prebuilt in any browser.
+<br>
+Open it and try once again to access `portal.php`.
+<br>
+You should see something like this:
+<br><img width="437" alt="devtools" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/95564cf0-9983-4ff8-b22c-b8ca00838186">
+<br>
+The request to `portal.php` has a status code of 302: indicates redirection.
+<br>
+By pressing this request we should see the headers, which are additional information regarding the request.
+<br>
+One of the headers is especially interesting:)
+<br>
+
+### Flag 6 - SQL injection
+SQL is a language for communicating with databases.
+<br>
+If we had to the login page and, for example, enter `username=admin` and `password=1234',
+<br>
+the sql code that is generated is typically:
+<br>
+`SELECT * FROM users WHERE username='admin' AND password='1234'`
+<br>
 
 
 
