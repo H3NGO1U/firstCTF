@@ -142,12 +142,101 @@ One of the headers is especially interesting:)
 ### Flag 6 - SQL injection
 SQL is a language for communicating with databases.
 <br>
-If we had to the login page and, for example, enter `username=admin` and `password=1234',
+If we had to the login page and, for example, enter `username=admin` and `password=1234`,
 <br>
 the sql code that is generated is typically:
 <br>
 `SELECT * FROM users WHERE username='admin' AND password='1234'`
 <br>
+As in other programming languages, it is possible to make comments in sql - 
+<br>
+the text in the comments is not part of the code and used, for example, for documentation.
+<br>
+Comments in sql are done with `--`, and in mysql **followed by a space**.
+<br>
+So, what happens if we enter `username=admin'-- ` and `password=1234`?
+<br>
+If the app is vulnerable to sql injection, we get the following sql query:
+<br>
+`SELECT * FROM users WHERE username='admin'-- ' AND password='1234'`
+<br>
+Meaning, all the part coming after the username check is **not** part of query, but a comment!
+<br>
+This way we can log in to `admin`'s account without knowing his password.
+<br>
+<br>
+So in the ctf, just use a username you know is present in the database.
+<br>
+That information was given in the `home.html` page.
+<br>
+If we enter `username=cArlos193'-- ` and `password=1234` (password can be anything, just not empty)
+<br>
+we should be able to login and see the flag.
+<br>
 
+### Flag 7 - IDOR
+After being redirected to `http://firstctf.atwebpages.com/profile.php?id=1`,
+<br>
+we can notice the `id` query parameter.
+<br>
+We, as being logged in to `carlos`'s account, should be able to see only his profile.
+<br>
+What if we can change the `id` parameter?
+<br>
+And indeed if you change it to  `id=2` you'll see other user's profile page.
+<br>
+This vulnerabilty is called [Insecure direct object references](https://portswigger.net/web-security/access-control/idor).
+<br>
+The flag appear in the avatar of the other user, just use an [image to text](https://www.imagetotext.info/) tool to grab it.
+<br>
 
+### Flag 8 - Cookies
+[Cookies](https://www.kaspersky.com/resource-center/definitions/cookies) are small text files with some info to send to the server with each request.
+<br>
+They are stored client side and can be easily manipulated by him, so information that we don't want 
+<br>
+the client to mess with should not be stored there.
+<br>
+We see that we are not premium.
+<br>
+Let's take a look at the cookies, for example by heading to `storage` or `Application` tab in `devtools` (depends on your browser).
+<br>
+<img width="451" alt="cookies" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/8c0ba1d4-8c45-4e01-80dd-40a31088aa87">
+<br>
+We can change the value in `premium` to yes, and refresh the page.
+<br>
+Flag should appear.
+<br>
+
+### Flag 9 - hidden
+The flag is there, in hidden html tag.
+<br>
+This tag and its contents don't appear in the page, but can be easily viewed in the source code:)
+<br>
+<br>
+
+## What next?
+After solving this CTF, you can without problems solve the following challenges in [picoCTF](https://play.picoctf.org/practice):
+* Inspect HTML
+* Includes
+* Insp3ct0r
+* where are the robots
+* Power Cookie
+* dont-use-client-side
+* sqlilite
+* Irish-Name-Repo 1
+* Irish-Name-Repo 2
+* Local Authority
+* Secrets
+* Cookies
+<br>
+  <br>
+And then move to other challenges, that might require some research.
+<br>
+I highly recommend as well using [portswigger academy](https://portswigger.net/web-security/all-topics).
+<br>
+It's absolutely free, and the majority of the labs can be solved with BurpSuite community, which is a great, free tool for pentesting.
+<br>
+<br>
+*Thanks for reading, good luck with your Cyber Security journey!*
 
