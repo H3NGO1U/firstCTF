@@ -27,7 +27,7 @@ This is a full walkthrough for finding the 10 flags in the CTF.
 Trying by yourself before reading it is highly recommended.
 
 ### Flag 0 - Examining source code
-After heading to the CTF [main page](http://firstctf.atwebpages.com "firstCTF"), we see the following page:
+After heading to the CTF [main page](http://firstctf.atwebpages.com), we see the following page:
 
 <img width="634" alt="Main page" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/300b53fc-de11-4296-95cc-7d9e1bf1ff12">
 <br>
