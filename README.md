@@ -28,13 +28,12 @@ Trying by yourself before reading it is highly recommended.
 
 ### Flag 0 - Examining source code
 After heading to the CTF [main page](http://firstctf.atwebpages.com), we see the following page:
-
-<img width="634" alt="Main page" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/300b53fc-de11-4296-95cc-7d9e1bf1ff12">
 <br>
+<img width="634" alt="Main page" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/c5c3b890-28a2-4c12-9b31-b4f77574836e">
 <br>
 To look at the source we press `ctrl U` or right click -> View Page Source.
 <br>
-Alternatively, we can [inspect](https://zapier.com/blog/inspect-element-tutorial) the webpage.
+Alternatively, we can [inspect](https://www.theodinproject.com/lessons/foundations-inspecting-html-and-css) the webpage.
 <br>
 We will focues on the script the checks if the code entered is correct or not:
 <br>
@@ -62,19 +61,19 @@ Can be found also [here](http://firstctf-flag-collector.rf.gd/).
 ### Flag 1 - Examining assets
 If we close the announcement in the home page, we see that we are invited to check the about page.
 <br>
-<br><img width="337" alt="About" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/3e859495-2594-40e5-93d0-64edf2b03891">
+<img width="337" alt="About" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/c8902ab5-ada1-4393-ab33-188719963ef7">
 <br>
 We should check the CSS file of that page, as it is the page responsibe for the style.
 <br>
 As before, we will look at the source.
 <br>
-<img width="450" alt="about source" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/ad066128-1135-4914-8ec9-1d4ec0f92cfa">
+<img width="450" alt="about source" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/df984eb9-21ea-4ac5-9e69-0a5551828fb7">
 <br>
 We can see there link to the file `a6oUt.css`.
 <br>
 We will navigate to that page.
 <br>
-<img width="446" alt="about css" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/720e0fe8-90ff-43a1-8e32-99d60451eefa">
+<img width="446" alt="about css" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/4f3fff25-29bb-4538-85d6-6dee059c4da6">
 <br>
 
 ### Flag 2 - robots.txt
@@ -89,7 +88,8 @@ By heading to `http://firstctf.atwebpages.com/robots.txt` we should see the flag
 
 ### Flag 3 - query parameter
 Let's go to `http://firstctf.atwebpages.com/assets/admin.php`.
-<br><img width="250" alt="admin page" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/c13c6f2f-8a19-4fd6-a988-682ebc4f4e4d">
+<br>
+<img width="250" alt="admin page" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/f413c61f-6e06-4f3e-994f-3689aef0dd4b">
 <br>
 We hould notice the `admin=no` added in the url (if not - press on the search bar and it should appear).
 <br>
@@ -142,7 +142,7 @@ One of the headers is especially interesting:)
 ### Flag 6 - SQL injection
 SQL is a language for communicating with databases.
 <br>
-If we had to the login page and, for example, enter `username=admin` and `password=1234`,
+If we head to the login page and, for example, enter `username=admin` and `password=1234`,
 <br>
 the sql code that is generated is typically:
 <br>
@@ -238,5 +238,6 @@ I highly recommend as well using [portswigger academy](https://portswigger.net/w
 It's absolutely free, and the majority of the labs can be solved with BurpSuite community, which is a great, free tool for pentesting.
 <br>
 <br>
+
 *Thanks for reading, good luck with your Cyber Security journey!*
 
