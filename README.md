@@ -3,7 +3,7 @@ Welcome to FirstCTF!
 <br>
 A web CTF for absolute beginners.
 <br>
-Check it out [here](http://firstctf.atwebpages.com "firstCTF")
+Check it out [here](https://firstctf.rf.gd "firstCTF")
 <br>
 ## Prior knowledge
 No prior knowledge is required.
