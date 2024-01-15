@@ -233,7 +233,7 @@ After solving this CTF, you can without problems solve the following challenges 
   <br>
 And then move to other challenges, that might require some research.
 <br>
-I highly recommend as well using [portswigger academy](https://portswigger.net/web-security/all-topics).
+I highly recommend as well learning from [Portswigger](https://portswigger.net/web-security/all-topics).
 <br>
 It's absolutely free, and the majority of the labs can be solved with BurpSuite community, which is a great, free tool for pentesting.
 <br>
