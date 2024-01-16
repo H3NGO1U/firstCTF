@@ -25,8 +25,10 @@ This CTF includes:
 This is a full walkthrough for finding the 10 flags in the CTF.
 <br>
 Trying by yourself before reading it is highly recommended.
-
-### Flag 0 - Examining source code
+<br>
+<br>
+<details>
+<summary>Flag 0 - Examining source code</summary>
 After heading to the CTF [main page](http://firstctf.atwebpages.com), we see the following page:
 <br>
 <img width="634" alt="Main page" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/c5c3b890-28a2-4c12-9b31-b4f77574836e">
@@ -57,8 +59,11 @@ In the main page, we have a `Submit Flag` button, there you can sign up and coll
 <br>
 Can be found also [here](http://firstctf-flag-collector.rf.gd/).
 <br>
-
-### Flag 1 - Examining assets
+</details>
+<br>
+<br>
+<details>
+<summary>Flag 1 - Examining assets</summary>
 If we close the announcement in the home page, we see that we are invited to check the about page.
 <br>
 <img width="337" alt="About" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/c8902ab5-ada1-4393-ab33-188719963ef7">
@@ -75,8 +80,11 @@ We will navigate to that page.
 <br>
 <img width="446" alt="about css" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/4f3fff25-29bb-4538-85d6-6dee059c4da6">
 <br>
-
-### Flag 2 - robots.txt
+</details>
+<br>
+<br>
+<details>
+<summary>Flag 2 - robots.txt</summary>
 That file is presents in most websites, and its role is to provide search engines crawlers with information
 <br>
 about which pages they should not access. 
@@ -85,8 +93,11 @@ Putting a page there doesn't necessarily remove it from google search results, a
 <br>
 By heading to `http://firstctf.atwebpages.com/robots.txt` we should see the flag, as well as some interesting endpoints we'd like to visit.
 <br>
-
-### Flag 3 - query parameter
+</details>
+<br>
+<br>
+<details>
+<summary>Flag 3 - query parameter</summary>
 Let's go to `http://firstctf.atwebpages.com/assets/admin.php`.
 <br>
 <img width="250" alt="admin page" src="https://github.com/H3NGO1U/firstCTF/assets/100107865/f413c61f-6e06-4f3e-994f-3689aef0dd4b">
@@ -110,15 +121,19 @@ But if we enter a number that is under 100, we will see another query parameter 
 <br>
 We can change it to the secret code, and press `Enter`.
 Flag should appear:)
+</details>
 <br>
-
-### Flag 4 - directories
+<br>
+<details>
+<summary>Flag 4 - directories</summary>
 When we notice that we are in a directory, we should always check it.
 <br>
-if we try to access `http://firstctf.atwebpages.com/assets/`, we will find another flag.
+if we try to access `http://firstctf.atwebpages.com/assets/`, we will find another flag.         
+</details>
 <br>
-
-### Flag 5 - using devtools
+<br> 
+<details>
+<summary>Flag 5 - using devtools</summary>
 Rememver the `portal.php` endpoint we discovered in the robots.txt file?
 <br>
 If you try to access it, you will be redirected to `redirect.html`.
@@ -137,9 +152,11 @@ The request to `portal.php` has a status code of 302: indicates redirection.
 By pressing this request we should see the headers, which are additional information regarding the request.
 <br>
 One of the headers is especially interesting:)
+</details>
 <br>
-
-### Flag 6 - SQL injection
+<br>
+<details>
+<summary>Flag 6 - SQL injection</summary>
 SQL is a language for communicating with databases.
 <br>
 If we head to the login page and, for example, enter `username=admin` and `password=1234`,
@@ -172,9 +189,11 @@ That information was given in the `home.html` page.
 If we enter `username=cArlos193'-- ` and `password=1234` (password can be anything, just not empty)
 <br>
 we should be able to login and see the flag.
+</details>
 <br>
-
-### Flag 7 - IDOR
+<br>
+<details>
+<summary>Flag 7 - IDOR</summary>
 After being redirected to `http://firstctf.atwebpages.com/profile.php?id=1`,
 <br>
 we can notice the `id` query parameter.
@@ -188,9 +207,11 @@ And indeed if you change it to  `id=2` you'll see other user's profile page.
 This vulnerabilty is called [Insecure direct object references](https://portswigger.net/web-security/access-control/idor).
 <br>
 The flag appear in the avatar of the other user, just use an [image to text](https://www.imagetotext.info/) tool to grab it.
+</details>
 <br>
-
-### Flag 8 - Cookies
+<br>
+<details>
+<summary>Flag 8 - Cookies</summary>
 [Cookies](https://www.kaspersky.com/resource-center/definitions/cookies) are small text files with some info to send to the server with each request.
 <br>
 They are stored client side and can be easily manipulated by him, so information that we don't want 
@@ -206,12 +227,15 @@ Let's take a look at the cookies, for example by heading to `storage` or `Applic
 We can change the value in `premium` to yes, and refresh the page.
 <br>
 Flag should appear.
+</details>
 <br>
-
-### Flag 9 - hidden
+<br>
+<details>
+<summary>Flag 9 - hidden</summary>
 The flag is there, in hidden html tag.
 <br>
 This tag and its contents don't appear in the page, but can be easily viewed in the source code:)
+</details>
 <br>
 <br>
 
